@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Archivo } from "next/font/google";
 import "./globals.css";
+import { EnquiryProvider } from "@/components/enquiry/EnquiryProvider";
+import { Masthead } from "@/components/layout/Masthead";
+import { Footer } from "@/components/layout/Footer";
 
 const cormorantGaramond = Cormorant_Garamond({
   variable: "--font-display",
@@ -32,7 +35,13 @@ export default function RootLayout({
       lang="en"
       className={`${cormorantGaramond.variable} ${archivo.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <EnquiryProvider>
+          <Masthead />
+          {children}
+          <Footer />
+        </EnquiryProvider>
+      </body>
     </html>
   );
 }

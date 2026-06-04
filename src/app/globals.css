@@ -204,98 +204,104 @@
 
 /* ============================================================
    SEMANTIC TYPE CLASSES — verbatim from colors_and_type.css.
-   Includes h1–h4 element bindings.
+   Includes h1–h4 / p element bindings.
+   Wrapped in @layer components so Tailwind utility classes
+   (text-fg-on-maroon, text-sm, font-semibold, etc.) win the
+   cascade and components can override per-instance without
+   inline-style sprawl.
    ============================================================ */
 
-.kt-eyebrow {
-  font-family: var(--font-eyebrow);
-  font-size: var(--t-eyebrow);
-  font-weight: var(--w-semi);
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--maroon-600);
-}
+@layer components {
+  .kt-eyebrow {
+    font-family: var(--font-eyebrow);
+    font-size: var(--t-eyebrow);
+    font-weight: var(--w-semi);
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--maroon-600);
+  }
 
-.kt-display {
-  font-family: var(--font-display);
-  font-size: var(--t-display);
-  font-weight: 600;
-  line-height: 1.02;
-  letter-spacing: -0.01em;
-  color: var(--fg-1);
-}
+  .kt-display {
+    font-family: var(--font-display);
+    font-size: var(--t-display);
+    font-weight: 600;
+    line-height: 1.02;
+    letter-spacing: -0.01em;
+    color: var(--fg-1);
+  }
 
-h1, .kt-h1 {
-  font-family: var(--font-display);
-  font-size: var(--t-h1);
-  font-weight: 600;
-  line-height: 1.06;
-  letter-spacing: -0.01em;
-  color: var(--fg-1);
-}
+  h1, .kt-h1 {
+    font-family: var(--font-display);
+    font-size: var(--t-h1);
+    font-weight: 600;
+    line-height: 1.06;
+    letter-spacing: -0.01em;
+    color: var(--fg-1);
+  }
 
-h2, .kt-h2 {
-  font-family: var(--font-display);
-  font-size: var(--t-h2);
-  font-weight: 600;
-  line-height: 1.1;
-  color: var(--fg-1);
-}
+  h2, .kt-h2 {
+    font-family: var(--font-display);
+    font-size: var(--t-h2);
+    font-weight: 600;
+    line-height: 1.1;
+    color: var(--fg-1);
+  }
 
-h3, .kt-h3 {
-  font-family: var(--font-display);
-  font-size: var(--t-h3);
-  font-weight: 600;
-  line-height: 1.16;
-  color: var(--fg-1);
-}
+  h3, .kt-h3 {
+    font-family: var(--font-display);
+    font-size: var(--t-h3);
+    font-weight: 600;
+    line-height: 1.16;
+    color: var(--fg-1);
+  }
 
-h4, .kt-h4 {
-  font-family: var(--font-sans);
-  font-size: var(--t-h4);
-  font-weight: 600;
-  line-height: 1.3;
-  letter-spacing: -0.005em;
-  color: var(--fg-1);
-}
+  h4, .kt-h4 {
+    font-family: var(--font-sans);
+    font-size: var(--t-h4);
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.005em;
+    color: var(--fg-1);
+  }
 
-.kt-lead {
-  font-family: var(--font-sans);
-  font-size: var(--t-body-lg);
-  font-weight: 400;
-  line-height: 1.6;
-  color: var(--fg-2);
-}
+  .kt-lead {
+    font-family: var(--font-sans);
+    font-size: var(--t-body-lg);
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--fg-2);
+  }
 
-p, .kt-body {
-  font-family: var(--font-sans);
-  font-size: var(--t-body);
-  font-weight: 400;
-  line-height: 1.65;
-  color: var(--fg-2);
-}
+  p, .kt-body {
+    font-family: var(--font-sans);
+    font-size: var(--t-body);
+    font-weight: 400;
+    line-height: 1.65;
+    color: var(--fg-2);
+  }
 
-.kt-small {
-  font-family: var(--font-sans);
-  font-size: var(--t-small);
-  line-height: 1.55;
-  color: var(--fg-3);
-}
+  .kt-small {
+    font-family: var(--font-sans);
+    font-size: var(--t-small);
+    line-height: 1.55;
+    color: var(--fg-3);
+  }
 
-.kt-caption {
-  font-family: var(--font-sans);
-  font-size: var(--t-caption);
-  font-weight: 500;
-  line-height: 1.4;
-  color: var(--fg-3);
-}
+  .kt-caption {
+    font-family: var(--font-sans);
+    font-size: var(--t-caption);
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--fg-3);
+  }
 
-/* Letter-spaced label, echoing "TOURS AND TRAVEL" */
-.kt-label {
-  font-family: var(--font-sans);
-  font-size: var(--t-caption);
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--slate-500);
+  /* Letter-spaced label, echoing "TOURS AND TRAVEL" */
+  .kt-label {
+    font-family: var(--font-sans);
+    font-size: var(--t-caption);
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--slate-500);
+  }
 }

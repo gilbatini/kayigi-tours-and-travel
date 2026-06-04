@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<style>
+  body { margin:0; font-family:var(--font-sans); background:var(--paper); }
+  .wrap { padding:24px 26px; display:flex; flex-direction:column; gap:16px; }
+  .row { display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+  .tag { font-size:11px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase;
+         padding:6px 12px; border-radius:var(--r-pill); display:inline-flex; align-items:center; gap:6px; }
+  .tag svg { width:13px; height:13px; }
+  .t-forest { background:var(--forest-wash); color:var(--forest); }
+  .t-gold { background:var(--gold-wash); color:#9c6c22; }
+  .t-maroon { background:var(--maroon-100); color:var(--maroon-600); }
+  .fact { display:inline-flex; align-items:center; gap:6px; font-size:13px; font-weight:500; color:var(--fg-2); }
+  .fact svg { width:15px; height:15px; color:var(--slate-500); }
+  .lbl { font-size:10px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--slate-300); margin-bottom:8px; display:block; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div>
+    <span class="lbl">Category tags</span>
+    <div class="row">
+      <span class="tag t-forest"><i data-lucide="trees"></i> Gorilla Trek</span>
+      <span class="tag t-forest"><i data-lucide="leaf"></i> Chimps</span>
+      <span class="tag t-gold"><i data-lucide="sun"></i> Game Drive</span>
+      <span class="tag t-maroon"><i data-lucide="car-front"></i> 4×4 Hire</span>
+    </div>
+  </div>
+  <div>
+    <span class="lbl">Trip facts</span>
+    <div class="row" style="gap:18px">
+      <span class="fact"><i data-lucide="clock"></i> 3 days</span>
+      <span class="fact"><i data-lucide="users"></i> Max 8</span>
+      <span class="fact"><i data-lucide="footprints"></i> Moderate</span>
+      <span class="fact"><i data-lucide="badge-check"></i> Permit included</span>
+    </div>
+  </div>
+</div>
+<script>lucide.createIcons();</script>
+</body>
+</html>

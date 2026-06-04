@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin:0; font-family:var(--font-sans); background:var(--paper); }
+  .wrap { padding:22px 24px; }
+  .row { display:flex; gap:14px; }
+  .col { flex:1; }
+  .bars { display:flex; border-radius:var(--r-md); overflow:hidden; box-shadow:var(--shadow-sm); }
+  .sw { flex:1; height:84px; display:flex; flex-direction:column; justify-content:flex-end; padding:9px; box-sizing:border-box; }
+  .hex { font-size:11.5px; font-weight:600; }
+  .nm { font-size:10px; font-weight:600; letter-spacing:0.07em; text-transform:uppercase; opacity:0.75; }
+  .cap { margin-top:8px; font-size:11.5px; color:var(--fg-3); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="row">
+    <div class="col">
+      <div class="bars">
+        <div class="sw" style="background:#C58A3D;color:#3A2206"><span class="nm">gold</span><span class="hex">#C58A3D</span></div>
+        <div class="sw" style="background:#E4C089;color:#5A3D12"><span class="nm">soft</span><span class="hex">#E4C089</span></div>
+        <div class="sw" style="background:#F6ECD8;color:#9c6c22"><span class="nm">wash</span><span class="hex">#F6ECD8</span></div>
+      </div>
+      <div class="cap"><strong style="color:#a06a22">Savanna gold</strong> — game drives, CTA accent on dark.</div>
+    </div>
+    <div class="col">
+      <div class="bars">
+        <div class="sw" style="background:#2E5A3E;color:#E4EDE5"><span class="nm">forest</span><span class="hex">#2E5A3E</span></div>
+        <div class="sw" style="background:#5C8366;color:#E4EDE5"><span class="nm">soft</span><span class="hex">#5C8366</span></div>
+        <div class="sw" style="background:#E4EDE5;color:#2E5A3E"><span class="nm">wash</span><span class="hex">#E4EDE5</span></div>
+      </div>
+      <div class="cap"><strong style="color:#2E5A3E">Forest green</strong> — gorilla &amp; chimp forest treks.</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

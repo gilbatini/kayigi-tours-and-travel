@@ -1,0 +1,205 @@
+/* ============================================================
+   KAYIGI TOURS & TRAVEL — Colors & Type Foundations
+   Uganda inbound safari operator. Premium editorial brand.
+   Import this file to inherit brand tokens.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+
+:root {
+  /* ---------- BRAND CORE ---------- */
+  /* Maroon — sampled from the wordmark (#600C30 core). The signature. */
+  --maroon-900: #3A0A1E;
+  --maroon-800: #4E0C28;
+  --maroon-700: #600C30;   /* sampled logo core */
+  --maroon-600: #6E1336;   /* PRIMARY brand maroon */
+  --maroon-500: #84244A;
+  --maroon-300: #B97E94;   /* tint for borders-on-maroon, muted marks */
+  --maroon-100: #F0E2E8;   /* pale wash / hover bg */
+  --maroon: var(--maroon-600);
+
+  /* ---------- WARM NEUTRALS (cream / sand) ---------- */
+  --paper:     #FBF9F2;   /* page background — the cream */
+  --sand:      #F2EBDD;   /* warm section / card surface */
+  --sand-deep: #E7DBC6;   /* warm divider / border */
+  --ink:       #2A211E;   /* warm near-black — primary text */
+  --ink-soft:  #4A403C;   /* body text on cream */
+
+  /* ---------- SLATE (from logo subtitle) ---------- */
+  --slate-700: #4E5862;
+  --slate-500: #6E7A85;   /* secondary text / muted UI */
+  --slate-300: #9AA4AD;   /* faint labels, placeholders */
+  --slate-100: #DDE1E4;
+
+  /* ---------- EARTH ACCENTS (safari category coding) ---------- */
+  --gold:        #C58A3D;  /* savanna sun — CTA accent on dark, highlights */
+  --gold-soft:   #E4C089;
+  --gold-wash:   #F6ECD8;
+  --forest:      #2E5A3E;  /* Bwindi rainforest — gorilla / chimp coding */
+  --forest-soft: #5C8366;
+  --forest-wash: #E4EDE5;
+
+  /* ---------- SEMANTIC SURFACES ---------- */
+  --bg-1: var(--paper);
+  --bg-2: var(--sand);
+  --bg-inverse: var(--maroon-700);
+  --surface-card: #FFFFFF;
+  --border: var(--sand-deep);
+  --border-strong: #D3C4A8;
+
+  /* ---------- SEMANTIC TEXT ---------- */
+  --fg-1: var(--ink);         /* headlines, primary */
+  --fg-2: var(--ink-soft);    /* body */
+  --fg-3: var(--slate-500);   /* muted / captions */
+  --fg-on-maroon: #F8EFE3;    /* warm cream text on maroon */
+  --fg-on-maroon-soft: #D6B7C2;
+
+  /* ---------- STATUS ---------- */
+  --positive: #2E5A3E;
+  --warning:  #C58A3D;
+  --danger:   #9B2335;
+
+  /* ---------- TYPE FAMILIES ---------- */
+  --font-display: 'Cormorant Garamond', 'Georgia', serif;
+  --font-sans: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+  --font-eyebrow: 'Archivo', sans-serif;
+
+  /* ---------- TYPE SCALE (fluid-ish, px) ---------- */
+  --t-display: 72px;   /* hero serif */
+  --t-h1: 54px;
+  --t-h2: 40px;
+  --t-h3: 28px;
+  --t-h4: 21px;
+  --t-body-lg: 19px;
+  --t-body: 17px;
+  --t-small: 15px;
+  --t-caption: 13px;
+  --t-eyebrow: 12px;
+
+  /* ---------- WEIGHTS ---------- */
+  --w-reg: 400;
+  --w-med: 500;
+  --w-semi: 600;
+  --w-bold: 700;
+
+  /* ---------- SPACING (4px base) ---------- */
+  --sp-1: 4px;  --sp-2: 8px;  --sp-3: 12px; --sp-4: 16px;
+  --sp-5: 24px; --sp-6: 32px; --sp-7: 48px; --sp-8: 64px;
+  --sp-9: 96px; --sp-10: 128px;
+
+  /* ---------- RADII ---------- */
+  --r-xs: 3px;
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 18px;
+  --r-pill: 999px;
+
+  /* ---------- SHADOWS (warm-tinted) ---------- */
+  --shadow-sm: 0 1px 2px rgba(58, 33, 24, 0.06), 0 1px 3px rgba(58, 33, 24, 0.05);
+  --shadow-md: 0 4px 12px rgba(58, 33, 24, 0.08), 0 2px 4px rgba(58, 33, 24, 0.05);
+  --shadow-lg: 0 18px 40px rgba(58, 33, 24, 0.14), 0 6px 14px rgba(58, 33, 24, 0.07);
+  --shadow-maroon: 0 12px 30px rgba(110, 19, 54, 0.28);
+
+  /* ---------- MOTION ---------- */
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 140ms;
+  --dur: 240ms;
+  --dur-slow: 480ms;
+}
+
+/* ============================================================
+   SEMANTIC TYPE CLASSES
+   ============================================================ */
+.kt-eyebrow {
+  font-family: var(--font-eyebrow);
+  font-size: var(--t-eyebrow);
+  font-weight: var(--w-semi);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--maroon-600);
+}
+
+.kt-display {
+  font-family: var(--font-display);
+  font-size: var(--t-display);
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+  color: var(--fg-1);
+}
+
+h1, .kt-h1 {
+  font-family: var(--font-display);
+  font-size: var(--t-h1);
+  font-weight: 600;
+  line-height: 1.06;
+  letter-spacing: -0.01em;
+  color: var(--fg-1);
+}
+
+h2, .kt-h2 {
+  font-family: var(--font-display);
+  font-size: var(--t-h2);
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--fg-1);
+}
+
+h3, .kt-h3 {
+  font-family: var(--font-display);
+  font-size: var(--t-h3);
+  font-weight: 600;
+  line-height: 1.16;
+  color: var(--fg-1);
+}
+
+h4, .kt-h4 {
+  font-family: var(--font-sans);
+  font-size: var(--t-h4);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.005em;
+  color: var(--fg-1);
+}
+
+.kt-lead {
+  font-family: var(--font-sans);
+  font-size: var(--t-body-lg);
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--fg-2);
+}
+
+p, .kt-body {
+  font-family: var(--font-sans);
+  font-size: var(--t-body);
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--fg-2);
+}
+
+.kt-small {
+  font-family: var(--font-sans);
+  font-size: var(--t-small);
+  line-height: 1.55;
+  color: var(--fg-3);
+}
+
+.kt-caption {
+  font-family: var(--font-sans);
+  font-size: var(--t-caption);
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--fg-3);
+}
+
+/* Letter-spaced label, echoing "TOURS AND TRAVEL" */
+.kt-label {
+  font-family: var(--font-sans);
+  font-size: var(--t-caption);
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--slate-500);
+}

@@ -1,0 +1,73 @@
+/* Kayigi website UI kit — kit-specific styles (imports brand tokens via index.html) */
+
+* { box-sizing: border-box; }
+html, body { margin:0; padding:0; }
+body { background:var(--paper); color:var(--fg-1); font-family:var(--font-sans); }
+.kit-root { min-height:100vh; }
+a { color:inherit; text-decoration:none; }
+button { font-family:var(--font-sans); cursor:pointer; }
+
+/* ---------- Photo placeholder (user fills with real safari imagery) ---------- */
+.photo {
+  position:relative; overflow:hidden; background:#3a2820;
+  background-image:
+    radial-gradient(120% 80% at 20% 0%, rgba(197,138,61,0.35), transparent 60%),
+    linear-gradient(160deg, #6e4632 0%, #3a2820 55%, #241813 100%);
+}
+.photo--forest {
+  background-image:
+    radial-gradient(120% 80% at 80% 0%, rgba(92,131,102,0.4), transparent 60%),
+    linear-gradient(160deg, #2f4a36 0%, #20312492 55%, #182019 100%);
+  background-color:#1c2a20;
+}
+.photo--maroon {
+  background-image:
+    radial-gradient(110% 90% at 75% 10%, rgba(132,36,74,0.55), transparent 60%),
+    linear-gradient(160deg, #5a1031 0%, #3a0a1e 60%, #2a0716 100%);
+  background-color:#3a0a1e;
+}
+.photo__hint {
+  position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
+  display:flex; align-items:center; gap:7px; color:rgba(255,255,255,0.42);
+  font-size:12px; font-weight:500; letter-spacing:0.02em; pointer-events:none;
+}
+.photo__hint svg { width:16px; height:16px; }
+.photo__grad-b { position:absolute; inset:auto 0 0 0; height:55%;
+  background:linear-gradient(to top, rgba(36,13,22,0.85), transparent); pointer-events:none; }
+
+/* ---------- buttons ---------- */
+.btn { font-size:15px; font-weight:600; border:none; border-radius:var(--r-pill);
+  display:inline-flex; align-items:center; gap:8px; padding:13px 24px;
+  transition:all var(--dur) var(--ease-out); white-space:nowrap; }
+.btn svg { width:17px; height:17px; }
+.btn--primary { background:var(--maroon-600); color:#F8EFE3; box-shadow:var(--shadow-maroon); }
+.btn--primary:hover { background:var(--maroon-800); transform:translateY(-1px); }
+.btn--primary:active { transform:translateY(0) scale(0.99); }
+.btn--gold { background:var(--gold); color:#3a2206; }
+.btn--gold:hover { filter:brightness(0.95); transform:translateY(-1px); }
+.btn--ghost-light { background:rgba(251,249,242,0.12); color:#fff; border:1.5px solid rgba(255,255,255,0.45); backdrop-filter:blur(4px); }
+.btn--ghost-light:hover { background:rgba(251,249,242,0.22); }
+.btn--outline { background:transparent; color:var(--maroon-600); border:1.5px solid var(--maroon-300); }
+.btn--outline:hover { background:var(--maroon-100); }
+.btn--sm { padding:9px 18px; font-size:13.5px; }
+
+/* ---------- chips / tags ---------- */
+.tag { font-size:11px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase;
+  padding:6px 12px; border-radius:var(--r-pill); display:inline-flex; align-items:center; gap:6px; }
+.tag svg { width:13px; height:13px; }
+.tag--forest { background:var(--forest-wash); color:var(--forest); }
+.tag--gold { background:var(--gold-wash); color:#9c6c22; }
+.tag--maroon { background:var(--maroon-100); color:var(--maroon-600); }
+
+.eyebrow { font-size:12px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:var(--maroon-600); }
+
+/* layout helpers */
+.container { max-width:1200px; margin:0 auto; padding:0 32px; }
+.fact { display:inline-flex; align-items:center; gap:6px; font-size:14px; font-weight:500; color:var(--fg-2); }
+.fact svg { width:16px; height:16px; color:var(--slate-500); }
+
+/* fade-in — base state is VISIBLE; motion only layers on when allowed (never traps content at opacity 0) */
+@keyframes riseIn { from { opacity:0; transform:translateY(14px); } to { opacity:1; transform:none; } }
+@media (prefers-reduced-motion: no-preference) {
+  .rise { animation:riseIn var(--dur-slow) var(--ease-out); }
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin:0; font-family:var(--font-sans); background:var(--paper); }
+  .wrap { padding:20px 24px; }
+  table { width:100%; border-collapse:collapse; }
+  td { padding:7px 0; vertical-align:middle; }
+  .chip { width:30px; height:30px; border-radius:7px; box-shadow:var(--shadow-sm); display:inline-block; }
+  .tok { font-family:var(--font-sans); font-size:13px; font-weight:600; color:var(--fg-1); }
+  .val { font-size:12px; color:var(--fg-3); }
+  .role { font-size:12px; color:var(--fg-2); text-align:right; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <table>
+    <tr><td style="width:42px"><span class="chip" style="background:#2A211E"></span></td><td><span class="tok">--fg-1</span></td><td class="val">#2A211E</td><td class="role">headlines, primary text</td></tr>
+    <tr><td><span class="chip" style="background:#4A403C"></span></td><td><span class="tok">--fg-2</span></td><td class="val">#4A403C</td><td class="role">body copy</td></tr>
+    <tr><td><span class="chip" style="background:#6E7A85"></span></td><td><span class="tok">--fg-3</span></td><td class="val">#6E7A85</td><td class="role">captions, muted</td></tr>
+    <tr><td><span class="chip" style="background:#FBF9F2;border:1px solid var(--sand-deep)"></span></td><td><span class="tok">--bg-1</span></td><td class="val">#FBF9F2</td><td class="role">page background</td></tr>
+    <tr><td><span class="chip" style="background:#F2EBDD"></span></td><td><span class="tok">--bg-2</span></td><td class="val">#F2EBDD</td><td class="role">section / card surface</td></tr>
+    <tr><td><span class="chip" style="background:#6E1336"></span></td><td><span class="tok">--maroon</span></td><td class="val">#6E1336</td><td class="role">primary action</td></tr>
+    <tr><td><span class="chip" style="background:#C58A3D"></span></td><td><span class="tok">--gold</span></td><td class="val">#C58A3D</td><td class="role">accent on dark</td></tr>
+  </table>
+</div>
+</body>
+</html>

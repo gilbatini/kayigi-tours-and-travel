@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<style>
+  body { margin:0; font-family:var(--font-sans); background:var(--paper); }
+  .wrap { padding:24px 26px; display:flex; gap:20px; align-items:flex-end; flex-wrap:wrap; }
+  .field { display:flex; flex-direction:column; gap:7px; }
+  label { font-size:11px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--slate-500); }
+  .inp { display:flex; align-items:center; gap:9px; background:#fff; border:1.5px solid var(--sand-deep);
+         border-radius:var(--r-sm); padding:11px 14px; min-width:180px; transition:border-color var(--dur); }
+  .inp:focus-within { border-color:var(--maroon-600); box-shadow:0 0 0 3px var(--maroon-100); }
+  .inp svg { width:17px; height:17px; color:var(--slate-500); }
+  .inp input { border:none; outline:none; font-family:var(--font-sans); font-size:15px; color:var(--fg-1); width:100%; background:transparent; }
+  .inp input::placeholder { color:var(--slate-300); }
+  .go { font-family:var(--font-sans); font-weight:600; font-size:14px; color:#F8EFE3; background:var(--maroon-600);
+        border:none; border-radius:var(--r-sm); padding:12px 22px; cursor:pointer; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="field">
+    <label>Destination</label>
+    <div class="inp"><i data-lucide="map-pin"></i><input placeholder="Bwindi, Kibale…" value="Bwindi" /></div>
+  </div>
+  <div class="field">
+    <label>When</label>
+    <div class="inp"><i data-lucide="calendar"></i><input placeholder="Add dates" /></div>
+  </div>
+  <button class="go">Search trips</button>
+</div>
+<script>lucide.createIcons();</script>
+</body>
+</html>

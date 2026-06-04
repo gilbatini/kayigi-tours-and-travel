@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<style>
+  body { margin:0; font-family:var(--font-sans); background:var(--sand); }
+  .wrap { padding:22px 26px; display:flex; gap:18px; }
+  .card { width:300px; background:#fff; border-radius:var(--r-lg); overflow:hidden; box-shadow:var(--shadow-md); }
+  .photo { height:150px; background:
+      linear-gradient(160deg,#7a3b2a,#3f2a22),
+      repeating-linear-gradient(45deg, rgba(255,255,255,.04) 0 8px, transparent 8px 16px);
+      position:relative; display:flex; align-items:flex-start; justify-content:space-between; padding:12px; }
+  .ph-note { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,.5); font-size:12px; gap:6px; }
+  .ph-note svg { width:16px; height:16px; }
+  .tag { font-size:10.5px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; padding:5px 11px;
+         border-radius:var(--r-pill); background:var(--forest-wash); color:var(--forest); z-index:1; }
+  .fav { width:32px; height:32px; border-radius:50%; background:rgba(251,249,242,.92); display:flex; align-items:center; justify-content:center; z-index:1; }
+  .fav svg { width:16px; height:16px; color:var(--maroon-600); }
+  .body { padding:16px 18px 18px; }
+  .body h3 { font-family:var(--font-display); font-size:23px; font-weight:600; color:var(--fg-1); margin:0 0 4px; }
+  .loc { font-size:12px; color:var(--fg-3); display:flex; align-items:center; gap:5px; margin-bottom:12px; }
+  .loc svg { width:13px; height:13px; }
+  .facts { display:flex; gap:14px; padding-top:12px; border-top:1px solid var(--sand-deep); }
+  .fact { display:flex; align-items:center; gap:5px; font-size:12.5px; color:var(--fg-2); font-weight:500; }
+  .fact svg { width:14px; height:14px; color:var(--slate-500); }
+  .price { margin-left:auto; text-align:right; }
+  .price b { font-family:var(--font-display); font-size:20px; color:var(--maroon-600); }
+  .price span { font-size:11px; color:var(--fg-3); display:block; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <article class="card">
+    <div class="photo">
+      <span class="tag">Gorilla Trek</span>
+      <span class="fav"><i data-lucide="heart"></i></span>
+      <span class="ph-note"><i data-lucide="image"></i> hero photo</span>
+    </div>
+    <div class="body">
+      <h3>3-Day Bwindi Gorilla Trek</h3>
+      <div class="loc"><i data-lucide="map-pin"></i> Bwindi Impenetrable Forest</div>
+      <div class="facts">
+        <span class="fact"><i data-lucide="clock"></i> 3 days</span>
+        <span class="fact"><i data-lucide="users"></i> Max 8</span>
+        <span class="price"><b>$1,480</b><span>per person</span></span>
+      </div>
+    </div>
+  </article>
+</div>
+<script>lucide.createIcons();</script>
+</body>
+</html>

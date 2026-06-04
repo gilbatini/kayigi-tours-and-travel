@@ -59,10 +59,11 @@
   --danger:   #9B2335;
 
   /* ---------- TYPE FAMILIES ---------- */
-  /* Phase 3 will rebind --font-display and --font-sans to next/font variables. */
+  /* --font-display and --font-sans are overridden on <html> by next/font (see layout.tsx).
+     These :root literals are the SSR-stale / no-JS fallback chain. */
   --font-display: 'Cormorant Garamond', 'Georgia', serif;
   --font-sans: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
-  --font-eyebrow: 'Archivo', sans-serif;
+  --font-eyebrow: var(--font-sans);
 
   /* ---------- TYPE SCALE ---------- */
   --t-display: 72px;

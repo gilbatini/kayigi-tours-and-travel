@@ -101,14 +101,14 @@ export function Masthead() {
 
         <div className="ml-auto flex items-center gap-sp-4">
           <a
-            href="tel:+256700000000"
+            href="tel:+256701004000"
             className={[
               "hidden items-center gap-2 text-sm font-medium transition-colors md:flex",
               solid ? "text-ink-soft" : "text-white/90",
             ].join(" ")}
           >
             <Phone className="size-4" aria-hidden="true" />
-            <span>+256 700 000 000</span>
+            <span>+256 701 004 000</span>
           </a>
           <button
             type="button"

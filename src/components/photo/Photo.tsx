@@ -1,19 +1,23 @@
+import Image from "next/image";
 import { Image as ImageIcon } from "lucide-react";
 import type { ReactNode } from "react";
 
-/**
- * Placeholder block for safari imagery. Ported from kit.css's `.photo` family.
- * When the `variant` field carries an asset path (Phase 9 swap), this component
- * should render the real image instead of the gradient; the data layer types
- * `photo: string` so both forms are accepted.
- */
 type PhotoProps = {
+  /**
+   * Either a kit variant key (`photo--forest`, `photo--maroon`) for the
+   * gradient placeholder, or a path beginning with `/` for a local asset
+   * rendered through `next/image`.
+   */
   variant?: string;
   label?: string;
   className?: string;
   children?: ReactNode;
-  /** Show the centered "image" hint with label. Defaults to true. */
+  /** Show the centered "image" hint with label. Only applies to gradient placeholder. */
   showHint?: boolean;
+  /** Pass-through to `next/image` — set true for the hero only. */
+  priority?: boolean;
+  /** Pass-through to `next/image` for srcset generation. */
+  sizes?: string;
 };
 
 type VariantKey = "default" | "forest" | "maroon";
@@ -39,24 +43,38 @@ function variantKey(variant?: string): VariantKey {
   return "default";
 }
 
+function isLocalPath(variant?: string): variant is string {
+  return typeof variant === "string" && variant.startsWith("/");
+}
+
 export function Photo({
   variant,
   label,
   className = "",
   children,
   showHint = true,
+  priority = false,
+  sizes,
 }: PhotoProps) {
+  const path = isLocalPath(variant);
   const v = variantKey(variant);
+  const style = path
+    ? { backgroundColor: FALLBACK_BG[v] }
+    : { backgroundColor: FALLBACK_BG[v], backgroundImage: GRADIENT[v] };
   return (
-    <div
-      className={`relative overflow-hidden ${className}`}
-      style={{
-        backgroundColor: FALLBACK_BG[v],
-        backgroundImage: GRADIENT[v],
-      }}
-    >
+    <div className={`overflow-hidden ${className}`} style={style}>
+      {path && (
+        <Image
+          src={variant!}
+          alt={label ?? ""}
+          fill
+          priority={priority}
+          sizes={sizes ?? "100vw"}
+          style={{ objectFit: "cover" }}
+        />
+      )}
       {children}
-      {showHint && label && (
+      {showHint && !path && label && (
         <span className="pointer-events-none absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center gap-[7px] text-[12px] font-medium tracking-[0.02em] text-white/40">
           <ImageIcon className="size-4" aria-hidden="true" />
           {label}

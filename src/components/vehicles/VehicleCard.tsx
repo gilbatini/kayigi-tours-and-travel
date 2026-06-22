@@ -12,7 +12,8 @@ export function VehicleCard({ vehicle }: { vehicle: Vehicle }) {
       <Photo
         variant={vehicle.photo}
         label={vehicle.name}
-        className="h-[178px]"
+        className="relative h-[178px]"
+        sizes="(min-width: 1024px) 380px, 100vw"
       >
         <span className="absolute left-[14px] top-[14px] inline-flex items-center gap-[6px] rounded-pill bg-maroon-100 px-3 py-[6px] text-[11px] font-semibold uppercase tracking-[0.1em] text-maroon-600">
           <CarFront className="size-[13px]" aria-hidden="true" />

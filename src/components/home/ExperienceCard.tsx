@@ -35,7 +35,8 @@ export function ExperienceCard({ exp }: { exp: Experience }) {
       <Photo
         variant={exp.photo}
         label={exp.park}
-        className="h-[212px]"
+        className="relative h-[212px]"
+        sizes="(min-width: 1024px) 380px, (min-width: 640px) 50vw, 100vw"
       >
         <span
           className={`absolute left-[14px] top-[14px] z-[2] inline-flex items-center gap-[6px] rounded-pill px-3 py-[6px] text-[11px] font-semibold uppercase tracking-[0.1em] ${tagClass}`}

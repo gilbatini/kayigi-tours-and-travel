@@ -30,9 +30,9 @@ export type Experience = {
   days: string;
   group: string;
   grade: string;
-  /** Pre-formatted UGX price string. */
+  /** Display price string — currently "Contact for rate" pending client rates. */
   price: string;
-  /** Photo variant or asset path; Phase 6's Photo component interprets it. */
+  /** Photo variant key (`photo--forest`) or local asset path beginning with `/`. */
   photo: string;
   blurb: string;
   days_list: ItineraryDay[];
@@ -46,7 +46,7 @@ export type Vehicle = {
   trans: string;
   drive: string;
   roof: string;
-  /** Pre-formatted UGX day-rate string. */
+  /** Display price string — currently "Contact for rate" pending client rates. */
   price: string;
   photo: string;
   specs: string[];
@@ -64,8 +64,8 @@ export const EXPERIENCES: readonly Experience[] = [
     days: "3 days",
     group: "Max 8",
     grade: "Moderate",
-    price: "UGX 5,550,000",
-    photo: "photo--forest",
+    price: "Contact for rate",
+    photo: "/images/safaris/safari-landcruiser-forest-road.png",
     blurb:
       "Climb misted hills to spend a permitted hour with a mountain gorilla family.",
     days_list: [
@@ -104,8 +104,8 @@ export const EXPERIENCES: readonly Experience[] = [
     days: "2 days",
     group: "Max 6",
     grade: "Easy–Moderate",
-    price: "UGX 2,400,000",
-    photo: "photo--forest",
+    price: "Contact for rate",
+    photo: "/images/safaris/safari-landcruiser-kibale-forest.png",
     blurb:
       "Follow the calls of 1,500 chimpanzees through one of Africa's richest rainforests.",
     days_list: [
@@ -139,8 +139,8 @@ export const EXPERIENCES: readonly Experience[] = [
     days: "3 days",
     group: "Max 7",
     grade: "Easy",
-    price: "UGX 3,340,000",
-    photo: "",
+    price: "Contact for rate",
+    photo: "/images/safaris/safari-landcruiser-rwenzori-gate.png",
     blurb:
       "Tree-climbing lions, elephants and a boat cruise on the wildlife-packed Kazinga Channel.",
     days_list: [
@@ -179,8 +179,8 @@ export const EXPERIENCES: readonly Experience[] = [
     days: "3 days",
     group: "Max 7",
     grade: "Easy",
-    price: "UGX 3,410,000",
-    photo: "",
+    price: "Contact for rate",
+    photo: "/images/safaris/safari-landcruiser-nile-sunset.png",
     blurb:
       "Where the Nile explodes through a 7-metre gap. Giraffe, lion and a falls-base cruise.",
     days_list: [
@@ -219,8 +219,8 @@ export const EXPERIENCES: readonly Experience[] = [
     days: "4 days",
     group: "Max 6",
     grade: "Easy",
-    price: "UGX 6,150,000",
-    photo: "",
+    price: "Contact for rate",
+    photo: "/images/safaris/safari-landcruiser-savanna-front.png",
     blurb:
       "Uganda's most remote, most cinematic park — golden plains rimmed by mountains.",
     days_list: [
@@ -259,8 +259,8 @@ export const EXPERIENCES: readonly Experience[] = [
     days: "10 days",
     group: "Private",
     grade: "Moderate",
-    price: "UGX 15,940,000",
-    photo: "photo--maroon",
+    price: "Contact for rate",
+    photo: "/images/safaris/safari-landcruiser-game-drive.png",
     blurb:
       "Gorillas, chimps and savanna in one unforgettable private journey across the south-west.",
     days_list: [
@@ -293,30 +293,14 @@ export const EXPERIENCES: readonly Experience[] = [
 
 export const VEHICLES: readonly Vehicle[] = [
   {
-    id: "lc-pop",
-    name: "Land Cruiser TZ (pop-top)",
-    seats: "7 seats",
-    trans: "Manual · diesel",
-    drive: "4×4 low-range",
-    roof: "Pop-up viewing roof",
-    price: "UGX 340,000",
-    photo: "",
-    specs: [
-      "Pop-up safari roof",
-      "Long-range fuel tank",
-      "Cooler box & 230V inverter",
-      "Recovery kit & spare ×2",
-    ],
-  },
-  {
     id: "lc-roof",
     name: "Land Cruiser + Rooftop Tent",
     seats: "5 seats",
     trans: "Manual · diesel",
     drive: "4×4 low-range",
     roof: "2× rooftop tents",
-    price: "UGX 450,000",
-    photo: "photo--forest",
+    price: "Contact for rate",
+    photo: "/images/IMG-20240611-WA0104-1.jpg",
     specs: [
       "Two rooftop tents (sleeps 4)",
       "Full camping kit & stove",
@@ -331,8 +315,8 @@ export const VEHICLES: readonly Vehicle[] = [
     trans: "Manual · petrol",
     drive: "2WD · graded roads",
     roof: "Pop-up viewing roof",
-    price: "UGX 260,000",
-    photo: "",
+    price: "Contact for rate",
+    photo: "/images/IMG_4955-scaled.jpeg",
     specs: [
       "Pop-up roof for game viewing",
       "Comfortable for groups",

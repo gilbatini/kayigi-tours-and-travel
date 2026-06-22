@@ -20,9 +20,11 @@ export function Hero() {
   return (
     <section className="relative flex min-h-[660px] items-end pb-[64px] pt-[140px]">
       <Photo
-        variant="photo--forest"
-        label="Mountain gorilla · Bwindi"
+        variant="/images/safaris/safari-landcruiser-savanna-front.png"
+        label="Kayigi Land Cruiser on the Ugandan savanna"
         className="absolute inset-0"
+        priority
+        sizes="100vw"
       />
       {/* Scrim — top + bottom darkening for content legibility. */}
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(36,13,22,0.55)_0%,rgba(36,13,22,0.12)_32%,rgba(36,13,22,0.30)_64%,rgba(36,13,22,0.82)_100%)]" />

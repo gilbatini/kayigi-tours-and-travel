@@ -2,14 +2,15 @@
 
 import { MessageCircle } from "lucide-react";
 
-const WHATSAPP_NUMBER = "256701004000";
-const GREETING = "Hi Kayigi, I'd like to plan a trip.";
-const HREF = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(GREETING)}`;
+const phone = "256701004000";
+const message =
+  "Hi Kayigi Tours! 👋 I'm interested in your car hire & safari fleet. Could you share availability and rates?";
+const href = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
 export function WhatsAppButton() {
   return (
     <a
-      href={HREF}
+      href={href}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with Kayigi on WhatsApp"

@@ -4,6 +4,7 @@ import "./globals.css";
 import { EnquiryProvider } from "@/components/enquiry/EnquiryProvider";
 import { Masthead } from "@/components/layout/Masthead";
 import { Footer } from "@/components/layout/Footer";
+import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 
 const cormorantGaramond = Cormorant_Garamond({
   variable: "--font-display",
@@ -43,6 +44,7 @@ export default function RootLayout({
           {children}
           <Footer />
         </EnquiryProvider>
+        <WhatsAppButton />
       </body>
     </html>
   );

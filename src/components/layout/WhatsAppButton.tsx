@@ -7,6 +7,21 @@ const phone = "256701004000";
 const fallback =
   "Hi Kayigi Tours! 👋 I'm interested in your car hire & safari fleet. Could you share availability and rates?";
 
+const QUICK_REPLIES: { label: string; message: string }[] = [
+  {
+    label: "🚗 Car hire",
+    message: "Hi Kayigi, I'd like to hire a vehicle. What's available?",
+  },
+  {
+    label: "🦍 Safari",
+    message: "Hi Kayigi, I'd like to plan a safari. What do you offer?",
+  },
+  {
+    label: "💰 Rates",
+    message: "Hi Kayigi, could you share your rates and availability?",
+  },
+];
+
 export function WhatsAppButton() {
   const [isOpen, setIsOpen] = useState(false);
   const [message, setMessage] = useState("");
@@ -54,6 +69,18 @@ export function WhatsAppButton() {
               Hi there! 👋 Welcome to Kayigi Tours &amp; Travel. Are you looking
               to hire a vehicle or plan a safari? Tell us what you have in mind
               and we&apos;ll get back to you on WhatsApp.
+            </div>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {QUICK_REPLIES.map((chip) => (
+                <button
+                  key={chip.label}
+                  type="button"
+                  onClick={() => setMessage(chip.message)}
+                  className="rounded-pill border-[1.5px] border-maroon-300 bg-transparent px-3 py-[5px] text-[12.5px] font-semibold text-maroon-600 transition-colors duration-200 hover:bg-maroon-100"
+                >
+                  {chip.label}
+                </button>
+              ))}
             </div>
           </div>
 

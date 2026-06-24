@@ -5,6 +5,13 @@ import { Photo } from "@/components/photo/Photo";
 import { useEnquiry } from "@/components/enquiry/EnquiryProvider";
 import type { Vehicle } from "@/lib/data";
 
+function driveTag(drive: string): string {
+  if (/4×4|4WD/i.test(drive)) return "4×4";
+  if (/AWD/i.test(drive)) return "AWD";
+  if (/2WD/i.test(drive)) return "2WD";
+  return drive;
+}
+
 export function VehicleCard({ vehicle }: { vehicle: Vehicle }) {
   const { open } = useEnquiry();
   return (
@@ -17,7 +24,7 @@ export function VehicleCard({ vehicle }: { vehicle: Vehicle }) {
       >
         <span className="absolute left-[14px] top-[14px] inline-flex items-center gap-[6px] rounded-pill bg-maroon-100 px-3 py-[6px] text-[11px] font-semibold uppercase tracking-[0.1em] text-maroon-600">
           <CarFront className="size-[13px]" aria-hidden="true" />
-          4×4 Hire
+          {driveTag(vehicle.drive)} Hire
         </span>
       </Photo>
       <div className="px-5 pb-5 pt-[18px]">

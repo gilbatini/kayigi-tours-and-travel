@@ -7,9 +7,9 @@ export default function Home() {
   return (
     <main className="flex-1">
       <Hero />
-      <Experiences />
-      <WhyBand />
       <VehiclesTeaser />
+      <WhyBand />
+      <Experiences />
     </main>
   );
 }

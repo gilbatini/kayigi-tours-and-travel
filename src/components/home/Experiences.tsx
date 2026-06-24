@@ -24,8 +24,8 @@ export function Experiences() {
       <div className="mx-auto max-w-[1200px] px-sp-6">
         <div className="mb-[38px] flex flex-wrap items-end justify-between gap-6">
           <div>
-            <span className="kt-eyebrow">Signature journeys</span>
-            <h2 className="mt-2">Choose your Uganda</h2>
+            <span className="kt-eyebrow">Pair your hire with a safari</span>
+            <h2 className="mt-2">Add a guided trip</h2>
           </div>
           <div className="flex flex-wrap gap-2">
             {FILTERS.map((f) => {

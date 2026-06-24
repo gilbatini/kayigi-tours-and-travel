@@ -21,13 +21,13 @@ export function VehiclesTeaser() {
     <section className="bg-paper py-[84px]">
       <div className="mx-auto grid max-w-[1200px] grid-cols-1 items-center gap-[60px] px-sp-6 lg:grid-cols-[1fr_380px]">
         <div>
-          <span className="kt-eyebrow">Self-drive or driver-guide</span>
-          <h2 className="mt-2">Safari-ready 4×4 hire</h2>
+          <span className="kt-eyebrow">Our fleet</span>
+          <h2 className="mt-2">Self-drive or with a driver-guide</h2>
           <p className="mt-[14px] mb-[22px] max-w-[480px] text-[16.5px] leading-[1.7] text-fg-2">
-            Take the wheel yourself or travel with one of our driver-guides.
-            Every Land Cruiser leaves our Kampala yard checked, kitted and
-            ready for the parks — pop-top roofs, rooftop tents and full camping
-            gear available.
+            Pop-top safari Land Cruisers, premium SUVs and city runabouts —
+            every vehicle leaves our Kampala yard checked, fuelled and kitted.
+            Take the wheel yourself or travel with one of our driver-guides,
+            with rooftop tents and full camping gear available on request.
           </p>
           <ul className="mb-[28px] flex flex-col gap-3">
             {BULLETS.map(({ Icon, label }) => (

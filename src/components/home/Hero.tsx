@@ -12,8 +12,8 @@ import { Photo } from "@/components/photo/Photo";
 
 const TRUST: { Icon: LucideIcon; label: string }[] = [
   { Icon: BadgeCheck, label: "Licensed Ugandan operator" },
-  { Icon: Star, label: "12 years guiding" },
-  { Icon: Leaf, label: "Permits handled for you" },
+  { Icon: Star, label: "Fully insured fleet" },
+  { Icon: Leaf, label: "Self-drive or chauffeur" },
 ];
 
 export function Hero() {
@@ -30,36 +30,35 @@ export function Hero() {
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(36,13,22,0.55)_0%,rgba(36,13,22,0.12)_32%,rgba(36,13,22,0.30)_64%,rgba(36,13,22,0.82)_100%)]" />
       <div className="relative z-[2] mx-auto w-full max-w-[1200px] px-sp-6">
         <span className="kt-eyebrow text-gold-soft">
-          Uganda · The Pearl of Africa
+          Vehicle Hire · Uganda
         </span>
         <h1 className="mb-[18px] mt-[14px] max-w-[760px] font-display text-[52px] font-semibold leading-[1] tracking-[-0.01em] text-white md:text-[68px]">
-          Stand metres from a{" "}
+          Safari 4×4s &amp; luxury cars{" "}
           <em className="font-display italic text-gold-soft">
-            mountain gorilla.
+            for hire.
           </em>
         </h1>
         <p className="mb-[30px] max-w-[580px] text-[19px] leading-[1.55] text-white/90">
-          Small-group safaris and self-drive 4×4 adventures across Uganda&apos;s
-          forests and savannas — planned with guides who know these hills by
-          name.
+          Self-drive or with a driver-guide. Pop-top safari Land Cruisers, plus
+          premium SUVs for city, airport and upcountry trips — across Uganda.
         </p>
 
         <div className="flex max-w-[840px] flex-wrap items-center gap-1 rounded-lg bg-paper/95 p-3 pl-2 shadow-lg backdrop-blur">
           <SearchField
             icon={<Compass className="size-[17px] text-maroon-600" aria-hidden="true" />}
-            label="Experience"
-            value="Gorilla trekking"
+            label="Vehicle type"
+            value="Safari Land Cruiser"
           />
           <Divider />
           <SearchField
             icon={<MapPin className="size-[17px] text-maroon-600" aria-hidden="true" />}
-            label="Park"
-            value="Bwindi Forest"
+            label="Pick-up"
+            value="Entebbe Airport"
           />
           <Divider />
           <SearchField
             icon={<Calendar className="size-[17px] text-maroon-600" aria-hidden="true" />}
-            label="When"
+            label="Dates"
             value="Add dates"
             muted
           />
@@ -68,7 +67,7 @@ export function Hero() {
             className="ml-[6px] inline-flex items-center gap-2 rounded-pill bg-maroon-600 px-6 py-[13px] text-[15px] font-semibold text-fg-on-maroon shadow-maroon transition-all duration-200 hover:-translate-y-px hover:bg-maroon-800"
           >
             <Search className="size-[17px]" aria-hidden="true" />
-            Find trips
+            Find vehicles
           </a>
         </div>
 

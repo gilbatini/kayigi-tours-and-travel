@@ -55,7 +55,7 @@ export default async function SafariPage({ params }: Props) {
       ? "bg-forest-wash text-forest"
       : "bg-gold-wash text-[#9c6c22]";
 
-  const whatsappText = `Hi Kayigi, I'm interested in the ${exp.title} safari. Could you share rates and availability?`;
+  const whatsappText = `Hi Kayigi, I'd like to add the ${exp.title} safari to a vehicle hire. Could you share rates and availability?`;
   const whatsappHref = `https://wa.me/256701004000?text=${encodeURIComponent(whatsappText)}`;
 
   return (
@@ -81,6 +81,9 @@ export default async function SafariPage({ params }: Props) {
               <h1 className="mt-[14px] max-w-[820px] text-white">{exp.title}</h1>
               <p className="mt-[14px] max-w-[680px] text-[16.5px] leading-[1.7] text-white/90">
                 {exp.blurb}
+              </p>
+              <p className="mt-[10px] max-w-[680px] text-[13.5px] italic leading-[1.55] text-white/70">
+                Bookable as an add-on to any Kayigi vehicle hire.
               </p>
             </div>
           </div>
@@ -131,7 +134,7 @@ export default async function SafariPage({ params }: Props) {
         <div className="mx-auto max-w-[1200px] px-sp-6">
           <div className="mb-[28px] max-w-[640px]">
             <span className="kt-eyebrow">What&apos;s included</span>
-            <h2 className="mt-2">Your safari includes</h2>
+            <h2 className="mt-2">What this add-on includes</h2>
           </div>
           <ul className="grid grid-cols-1 gap-[12px] sm:grid-cols-2">
             {exp.includes.map((item) => (
@@ -152,11 +155,12 @@ export default async function SafariPage({ params }: Props) {
 
       <section className="bg-sand py-[84px]">
         <div className="mx-auto max-w-[1200px] px-sp-6 text-center">
-          <span className="kt-eyebrow">Ready when you are</span>
-          <h2 className="mt-2">Plan your {exp.title}</h2>
+          <span className="kt-eyebrow">Add it to your hire</span>
+          <h2 className="mt-2">Add {exp.title} to your hire</h2>
           <p className="mx-auto mt-[14px] max-w-[560px] text-[16.5px] leading-[1.7] text-fg-2">
-            Tell us your dates and we&apos;ll send tailored rates, availability
-            and a route plan within hours.
+            Tell us your dates and which vehicle you&apos;d like to drive —
+            we&apos;ll bundle this safari onto your hire with rates,
+            permits and a route plan sorted within hours.
           </p>
           <div className="mt-[28px] flex flex-wrap items-center justify-center gap-3">
             <a
@@ -169,10 +173,10 @@ export default async function SafariPage({ params }: Props) {
               <ArrowRight className="size-[17px]" aria-hidden="true" />
             </a>
             <Link
-              href="/#experiences"
+              href="/vehicles"
               className="inline-flex items-center gap-2 rounded-pill border-[1.5px] border-maroon-300 px-6 py-[13px] text-[15px] font-semibold text-maroon-600 transition-all duration-200 hover:bg-maroon-100"
             >
-              Browse more safaris
+              Browse vehicles
             </Link>
           </div>
           <p className="mt-[14px] text-[13px] text-fg-3">{exp.price}</p>

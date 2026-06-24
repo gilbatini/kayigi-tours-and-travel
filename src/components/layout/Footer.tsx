@@ -17,7 +17,7 @@ const FOOTER_LINKS = {
   ],
   brand: [
     { href: "/about", label: "About us" },
-    { href: "/journal", label: "Travel journal" },
+    { href: "/journal", label: "Journal" },
     { href: "/responsible-travel", label: "Responsible travel" },
     { href: "/contact", label: "Contact" },
   ],
